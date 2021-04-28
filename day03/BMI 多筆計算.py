@@ -7,12 +7,13 @@ import math
 import math
 def GetBMI(h,w):
  bmi = w/math.pow(h/100,2)
- result ="Too Thin"
+
     #result = "Too Fat" if bmi>23 else "Too Thin" if bmi <=18 else "正常"
-        if 18 < bmi < 23:
-            result="Regular"
-        else:
-            result="Too Fat"
+ result = "過輕"
+    if 18 < bmi <= 23:
+         result = "正常"
+    elif bmi > 23:
+         result = "過胖"
 
 print("h=%.1f w=%.1f bmi=%.2f result=%s" % (h, w, bmi,result))
 GetBMI(170,50)
